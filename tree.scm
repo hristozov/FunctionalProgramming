@@ -1,5 +1,3 @@
-
-
 (define (right tree) (caddr tree))
 
 (define (value tree) (car tree))
