@@ -1,10 +1,10 @@
 #lang racket
 
-(define (cont_fraction n) 
+(define (cont_fraction x n) 
     (define (helper i)
         (cond 
-            ((= i n) (** x 2))
-            (else ( + (** 2 i) (/ (** 2 i) (helper i + 1))))
-    )
-    (/ 1 (helper 0)
-)
+            ((> i n) (expt x 2))
+            (else (+ (expt x 2) (/ (expt 2 i) (helper (+ i 1)))))
+    ))
+    (/ x (helper 1)
+))
